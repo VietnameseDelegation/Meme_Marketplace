@@ -8,13 +8,13 @@ interface Props {
 export interface FilterState {
     search: string;
     category: string;
-    sortBy: 'name' | 'rating' | 'size';
+    sortBy: 'popularity' | 'name' | 'rating' | 'size';
 }
 
 const MemeFilters: React.FC<Props> = ({ onFilterChange }) => {
     const [search, setSearch] = useState('');
     const [category, setCategory] = useState('All');
-    const [sortBy, setSortBy] = useState<'name' | 'rating' | 'size'>('name');
+    const [sortBy, setSortBy] = useState<'popularity' | 'name' | 'rating' | 'size'>('popularity');
 
     // Debouncing search
     useEffect(() => {
@@ -54,6 +54,7 @@ const MemeFilters: React.FC<Props> = ({ onFilterChange }) => {
                     onChange={(e) => setSortBy(e.target.value as any)}
                     className={styles.select}
                 >
+                    <option value="popularity">Popularity (Default)</option>
                     <option value="name">Name (A-Z)</option>
                     <option value="rating">Rating (Highest)</option>
                     <option value="size">Size (Smallest)</option>

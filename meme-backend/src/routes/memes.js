@@ -49,6 +49,7 @@ router.get('/memes', async (req, res) => {
 
         if (data.success) {
             const allMemes = data.data.memes;
+
             const paginatedMemes = allMemes.slice(startIndex, endIndex);
 
             // Artificial categories and ratings for demo purposes

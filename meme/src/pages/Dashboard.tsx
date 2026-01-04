@@ -6,17 +6,19 @@ import useCart from '../hooks/useCart';
 import styles from './Dashboard.module.css';
 
 const Dashboard: React.FC = () => {
-    const { data: memes, loading, error } = useFetch(getMemes);
+    const { data: response, loading, error } = useFetch(() => getMemes(1, 100));
     const { items, totalPrice } = useCart();
+
+    const memes = response?.memes;
 
     const stats = useMemo(() => {
         if (!memes) return null;
         return {
-            totalMemes: memes.length,
+            totalMemes: response?.total || memes.length,
             categories: new Set(memes.map(m => m.category)).size,
             topRated: [...memes].sort((a, b) => (b.rating || 0) - (a.rating || 0))[0],
         };
-    }, [memes]);
+    }, [memes, response]);
 
     if (loading) return <div>Loading dashboard...</div>;
     if (error) return <div>Failed to load data</div>;

@@ -13,7 +13,7 @@ const Memes: React.FC = () => {
     const [filters, setFilters] = useState<FilterState>({
         search: '',
         category: 'All',
-        sortBy: 'name'
+        sortBy: 'popularity'
     });
 
     const observer = useRef<IntersectionObserver>();
@@ -63,6 +63,8 @@ const Memes: React.FC = () => {
             .sort((a, b) => {
                 // Sort
                 switch (filters.sortBy) {
+                    case 'popularity':
+                        return 0; // Keep insertion order
                     case 'name':
                         return a.name.localeCompare(b.name);
                     case 'rating':

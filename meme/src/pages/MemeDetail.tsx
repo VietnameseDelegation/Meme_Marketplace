@@ -9,7 +9,8 @@ import styles from './MemeDetail.module.css';
 const MemeDetail: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
-    const { data: memes, loading } = useFetch(getMemes);
+    const { data: response, loading } = useFetch(() => getMemes(1, 100));
+    const memes = response?.memes;
     const { addItem } = useCart();
 
     const meme = useMemo(() => memes?.find(m => m.id === id), [memes, id]);
