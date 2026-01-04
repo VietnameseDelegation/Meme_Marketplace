@@ -1,0 +1,165 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.empty {
+    text-align: center;
+    padding: 4rem;
+    color: #7f8c8d;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.clearBtn {
+    background: none;
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.clearBtn:hover {
+    background: #e74c3c;
+    color: white;
+}
+
+.list {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #ecf0f1;
+    gap: 1.5rem;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.imageWrapper {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.details {
+    flex: 1;
+}
+
+.details h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.rating {
+    color: #f1c40f;
+    font-size: 0.9rem;
+}
+
+.price {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: #f5f6fa;
+    padding: 0.4rem;
+    border-radius: 4px;
+}
+
+.controlBtn {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.quantity {
+    font-weight: bold;
+    min-width: 1.5rem;
+    text-align: center;
+}
+
+.subtotal {
+    font-weight: bold;
+    font-size: 1.1rem;
+    width: 80px;
+    text-align: right;
+    color: #2c3e50;
+}
+
+.removeBtn {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.footer {
+    margin-top: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: right;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.totalLabel {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+.totalPrice {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+.checkoutBtn {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.checkoutBtn:hover {
+    background: #219150;
+}
