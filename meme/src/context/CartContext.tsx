@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import useLocalStorage from '../hooks/useLocalStorage';
+import { useAuth } from './AuthContext';
 import type { Meme } from '../services/memeApi';
 
 export interface CartItem extends Meme {
@@ -18,13 +19,16 @@ interface CartContextType {
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
+
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [storedCart, setStoredCart] = useLocalStorage<CartItem[]>('cart', []);
+    const { user } = useAuth();
+    const cartKey = user?.username ? `cart_${user.username}` : 'cart_guest';
+    const [storedCart, setStoredCart] = useLocalStorage<CartItem[]>(cartKey, []);
     const [items, setItems] = useState<CartItem[]>(storedCart);
 
     useEffect(() => {
         setItems(storedCart);
-    }, [storedCart]);
+    }, [storedCart, cartKey]);
 
     const updateCart = (newItems: CartItem[]) => {
         setItems(newItems);

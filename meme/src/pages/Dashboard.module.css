@@ -4,49 +4,54 @@
 
 .title {
     margin-bottom: 2rem;
-    color: #2c3e50;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1.5rem;
     margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .card {
     padding: 1.5rem;
     border-radius: 10px;
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: white;
+    color: #2c3e50;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
 }
 
 .card h3 {
     margin: 0;
     font-size: 1.1rem;
-    opacity: 0.9;
+    opacity: 0.7;
 }
 
 .number {
     font-size: 2.5rem;
     font-weight: bold;
     margin: 0.5rem 0;
+    color: #2c3e50;
 }
 
-.blue {
-    background: linear-gradient(135deg, #3498db, #2980b9);
-}
-
-.green {
-    background: linear-gradient(135deg, #2ecc71, #27ae60);
-}
-
-.purple {
-    background: linear-gradient(135deg, #9b59b6, #8e44ad);
-}
-
+.blue,
+.green,
+.purple,
 .orange {
-    background: linear-gradient(135deg, #f1c40f, #f39c12);
+    background: white;
 }
 
 .miniMeme {

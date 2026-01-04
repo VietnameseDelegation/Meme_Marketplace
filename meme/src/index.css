@@ -3,14 +3,24 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: light;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #fce4ec 0%, #e3f2fd 100%);
+  background-attachment: fixed;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  /* Ensure background covers the whole body */
+  background: linear-gradient(135deg, #fce4ec 0%, #e3f2fd 100%) no-repeat fixed;
+  color: #2c3e50;
 }
 
 a {
@@ -21,14 +31,6 @@ a {
 
 a:hover {
   color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -64,6 +66,11 @@ button:focus-visible {
     background-attachment: fixed;
   }
 
+  body {
+    background: linear-gradient(135deg, #fce4ec 0%, #e3f2fd 100%) no-repeat fixed;
+    color: #2c3e50;
+  }
+
   a:hover {
     color: #74b9ff;
   }
@@ -72,8 +79,4 @@ button:focus-visible {
     background-color: #ffffff;
     color: #2c3e50;
   }
-}
-
-body {
-  background: linear-gradient(135deg, #fce4ec 0%, #e3f2fd 100%) no-repeat fixed;
 }

@@ -46,7 +46,7 @@ const Memes: React.FC = () => {
 
     return (
         <div>
-            <h1 style={{ marginBottom: '2rem', color: '#2c3e50' }}>Explore Memes</h1>
+            <h1 style={{ marginBottom: '2rem' }}>Explore Memes</h1>
             <MemeFilters onFilterChange={setFilters} />
             <MemeGrid memes={filteredMemes} loading={loading} />
         </div>

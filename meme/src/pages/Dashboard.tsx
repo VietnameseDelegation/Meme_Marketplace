@@ -31,10 +31,7 @@ const Dashboard: React.FC = () => {
                     <p className={styles.number}>{stats?.totalMemes}</p>
                 </div>
 
-                <div className={`${styles.card} ${styles.green}`}>
-                    <h3>Categories</h3>
-                    <p className={styles.number}>{stats?.categories}</p>
-                </div>
+
 
                 <div className={`${styles.card} ${styles.purple}`}>
                     <h3>Cart Items</h3>

@@ -20,7 +20,7 @@ const Layout: React.FC = () => {
     return (
         <div className={styles.container}>
             <header className={styles.header}>
-                <Link to="/" className={styles.logo}>MemeMarket Pro</Link>
+                <Link to="/" className={styles.logo}>meme kiosk :D</Link>
 
                 {user?.loggedIn && (
                     <nav className={styles.nav}>
@@ -40,7 +40,7 @@ const Layout: React.FC = () => {
             </main>
 
             <footer className={styles.footer}>
-                <p>&copy; 2026 Meme Marketplace Pro. All rights reserved.</p>
+                <p>&copy; 2026 meme kiosk :D. All rights reserved.</p>
             </footer>
         </div>
     );
